@@ -1,27 +1,28 @@
-/* Global styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    font-size: 18px; 
 }
 
 .container {
     display: grid;
-    grid-template-columns: 0.5fr 2.2fr 1.3fr; /* Adjusted sidebar size */
+    grid-template-columns: 0.5fr 2.2fr 1.3fr; 
     gap: 20px;
     height: 100vh;
     padding: 10px;
     box-sizing: border-box;
+    font-size: 18px; 
 }
 
-/* Sidebar styles */
 .sidebar {
     background-color: #f4f4f4;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    font-size: 18px; 
 }
 
 .sidebar ul {
@@ -38,7 +39,7 @@ body {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #6a0dad; /* Purple color */
+    background-color: #6a0dad; 
     color: white;
     text-align: center;
     border: none;
@@ -46,50 +47,53 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-size: 18px; 
 }
 
 .sidebar .buttonSign:hover {
-    background-color: #4b0082; /* Darker purple */
+    background-color: #4b0082; 
 }
 
-/* Main content styles */
+
 .maincontent {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    font-size: 18px; 
 }
 
 .maincontent h1 {
-    font-size: 24px;
+    font-size: 28px; 
     margin-bottom: 20px;
 }
 
 .maincontent form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
 }
 
 .maincontent input,
 .maincontent select,
 .maincontent button {
-    padding: 10px;
+    padding: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px; 
 }
 
 .maincontent button {
-    background-color: #6a0dad; /* Purple color */
+    background-color: #6a0dad; 
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; 
 }
 
 .maincontent button:hover {
-    background-color: #4b0082; /* Darker purple */
+    background-color: #4b0082; 
 }
 
 /* News section styles */
@@ -99,6 +103,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    font-size: 18px; 
 }
 
 .NewsBlock {
@@ -111,22 +116,18 @@ body {
 
 .NewsTitle {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px; 
     margin-bottom: 10px;
 }
 
-.NewsDesc {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
+.NewsDesc,
 .NewsContent {
-    font-size: 14px;
+    font-size: 18px; 
     margin-bottom: 10px;
 }
 
 .NewsPublishedAt {
-    font-size: 12px;
+    font-size: 16px; 
     color: #666;
 }
 
@@ -137,7 +138,6 @@ body {
     margin-top: 10px;
 }
 
-/* Form styles */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -150,36 +150,39 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
     background-color: #ffffff; 
     box-sizing: border-box;
+    font-size: 18px; 
 }
 
 .form-title {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 700; /* font-bold */
-    margin-bottom: 1.5rem; /* 6 */
+    font-size: 24px; 
+    font-weight: 700; 
+    margin-bottom: 1.5rem; 
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* 6 */
+    gap: 1.5rem; 
     padding-bottom: 10px;
 }
 
 .form-fieldset {
-    border: 1px solid #e5e7eb; /* gray-300 */
-    padding: 0.75rem; /* 3 */
-    border-radius: 0.5rem; /* rounded */
+    border: 1px solid #e5e7eb; 
+    padding: 0.75rem; 
+    border-radius: 0.5rem; 
 }
 
 .form-legend {
-    font-weight: 500; /* font-medium */
+    font-weight: 500; 
+    font-size: 18px; 
 }
 
 .form-input {
-    border: 1px solid #e5e7eb; /* gray-300 */
-    border-radius: 0.5rem; /* rounded */
-    padding: 0.5rem; /* 2 */
+    border: 1px solid #e5e7eb; 
+    border-radius: 0.5rem; 
+    padding: 0.5rem; 
     width: 100%;
+    font-size: 18px; 
 }
 
 .form-button-container {
@@ -187,26 +190,26 @@ body {
 }
 
 .form-button {
-    background-color: #6a0dad; /* purple */
-    color: #ffffff; /* white */
-    padding: 0.5rem 1rem; /* py-2 px-4 */
-    border-radius: 0.5rem; /* rounded */
+    background-color: #6a0dad; 
+    color: #ffffff; 
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; 
 }
 
 .form-button:hover {
-    background-color: #4b0082; /* darker purple */
+    background-color: #4b0082; 
 }
 
-/* Form select styles */
 .form-select {
     display: block;
     width: 100%;
-    max-width: 20rem; /* Adjusted width */
+    max-width: 20rem; 
     padding: 0.5rem 1rem;
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 18px; 
     color: #333;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -217,15 +220,15 @@ body {
 
 .form-select:focus {
     outline: none;
-    border-color: #6a0dad; /* Purple color */
-    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3); /* Purple shadow */
+    border-color: #6a0dad; 
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3);
 }
 
-/* Checkbox group styles */
 .form-checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Space between checkboxes */
+    gap: 0.5rem; 
+    font-size: 18px; 
 }
 
 .form-group {
@@ -234,18 +237,17 @@ body {
 
 .form-error {
     color: red;
-    font-size: 0.875rem; /* text-sm */
+    font-size: 18px; 
     margin-top: 0.25rem; /* 1 */
     padding-bottom: 10px;
 }
 .form-success {
     color: green;
-    font-size: 0.875rem; /* text-sm */
-    margin-top: 0.25rem; /* 1 */
+    font-size: 18px; 
+    margin-top: 0.25rem; 
     padding-bottom: 10px;
 }
 
-/* Spinner styles */
 .spinner-container {
     display: flex;
     justify-content: center;
@@ -263,7 +265,7 @@ body {
     width: 50px;
     height: 50px;
     border: 5px solid rgba(0, 0, 0, 0.1);
-    border-top-color: #6a0dad; /* Purple color */
+    border-top-color: #6a0dad; 
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
