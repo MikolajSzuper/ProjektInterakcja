@@ -7,10 +7,8 @@ const { sequelize, QueryResult, Users, pool} = require('../db');
 const SECRET_KEY = 'e91f696e93ce5cb5a43208aa0368aae3f711f1a03a66bb052290a22df6fd266fz';
 
 const { Sequelize } = require('sequelize');
-// użycie cookie parsera
 router.use(cookieParser());
 
-// Rejestracja
 router.post('/register', async (req, res) => {
     const { username, password } = req.body;
     const hashed = await bcrypt.hash(password, 10);
@@ -31,7 +29,6 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// Logowanie
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
     // const result = await pool.query('SELECT * FROM Users WHERE username = $1',[username]);
@@ -46,7 +43,6 @@ router.post('/login', async (req, res) => {
     }
     const token = jwt.sign({ username }, SECRET_KEY, { expiresIn: '1h' });
 
-    // Ustawienie ciasteczka httpOnly
     res.cookie('token', token, {
         httpOnly: true,
         sameSite: 'lax',
@@ -55,7 +51,7 @@ router.post('/login', async (req, res) => {
 
     res.json({ message: 'Zalogowano pomyślnie' });
 });
-//Wylogowanie
+
 router.post("/logout",(req,res)=>{
     res.clearCookie('token', {
         httpOnly: true,
@@ -64,7 +60,6 @@ router.post("/logout",(req,res)=>{
     res.json({ message: 'Wylogowano pomyślnie' });
 })
 
-// Endpoint sprawdzający czy użytkownik jest zalogowany
 router.get('/me', (req, res) => {
     const token = req.cookies.token;
     if (!token) return res.status(401).json({ message: 'Brak tokena' });

@@ -20,7 +20,6 @@ export default function UsersSearches() {
                 });
                 if (!respo.ok) throw new Error("Brak danych lub błąd autoryzacji");
                 const data = await respo.json();
-                // Zbierz tylko te, które istnieją i mają datę
                 const keys = ["first", "second", "third", "fourth", "fifth"];
                 const arr = keys.map(k => data[k]).filter(r => r && r.date);
                 setResults(arr);
