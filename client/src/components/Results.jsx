@@ -105,7 +105,7 @@ export default function Results() {
         Object.keys(state).map((key) => {
             kolor = getRandomColor();
             try{
-                if(key==="inflation"  || key==="pkb" || key==="pkbPerCapita" || key==="ppp" || key==="pppPerCapita"  ){
+                if(key==="inflation"  || key==="pkb" || key==="pkbPerCapita" || key==="gva" || key==="gvaPerCapita"  ){
                     allData.push({
                         label: key,
                         data: alignData(state[key].dates, state[key].values, allDates),

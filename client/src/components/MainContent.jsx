@@ -87,8 +87,8 @@ function MainContent() {
                             <Checkbox value="inflation" onChange={setInflation} />
                             <Checkbox value="pkb" onChange={setPkb} />
                             <Checkbox value="pkbPerCapita" onChange={setPkbPerCapita} />
-                            <Checkbox value="ppp" onChange={setPpp} />
-                            <Checkbox value="pppPerCapita" onChange={setPppPerCapita} />
+                            <Checkbox value="gva" onChange={setPpp} />
+                            <Checkbox value="gvaPerCapita" onChange={setPppPerCapita} />
                         </div>
                     </fieldset>
                 </div>

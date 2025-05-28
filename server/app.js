@@ -6,6 +6,7 @@ var logger = require('morgan');
 var authRouter = require('./routes/auth'); 
 var apiRouter = require('./routes/api'); 
 const cors = require('cors');
+const verifyToken = require('./middleware/verifyToken');
 
 
 
@@ -25,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/auth', authRouter);
-app.use('/api', apiRouter);
+app.use('/api', verifyToken, apiRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));

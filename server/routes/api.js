@@ -470,7 +470,7 @@ router.get('/test', async (req, res) => {
             for (const year of years) {
                 const from = `${year}-01-01T00:00:00Z`;
                 const to = `${year}-12-31T23:59:59Z`;
-                const url = `https://gnews.io/api/v4/search?q=global&category=business&lang=en&from=${from}&to=${to}&max=1&apikey=70dbd09cd5b78d9ff8af22c38a3b2f4f`;
+                const url = `https://gnews.io/api/v4/search?q=global&category=business&lang=en&from=${from}&to=${to}&max=1&apikey=8c735d8d401bdfdb68438c726710f005`;
                 try {
                     const response = await axios.get(url);
                     const news = response.data.articles?.[0];
@@ -516,7 +516,7 @@ router.get('/test', async (req, res) => {
             for (const year of years) {
                 const from = `${year}-01-01T00:00:00Z`;
                 const to = `${year}-12-31T23:59:59Z`;
-                const url = `https://gnews.io/api/v4/search?q=Poland&lang=en&category=business&from=${from}&to=${to}&max=1&apikey=080e3de2b00eddd09a9ff97335c13b4f`;
+                const url = `https://gnews.io/api/v4/search?q=Poland&lang=en&category=business&from=${from}&to=${to}&max=1&apikey=8c735d8d401bdfdb68438c726710f005`;
                 try {
                     const response = await axios.get(url);
                     const news = response.data.articles?.[0];
@@ -575,10 +575,10 @@ router.get('/test', async (req, res) => {
             responseData.pkbPerCapita = await fetchPKBPerCapita(dateFrom, dateTo);
         }
         if (ppp === 'true') {
-            responseData.ppp = await fetchGVA(dateFrom, dateTo);
+            responseData.gva = await fetchGVA(dateFrom, dateTo);
         }
         if (pppPerCapita === 'true') {
-            responseData.pppPerCapita = await fetchGVAPerCapita(dateFrom, dateTo);
+            responseData.gvaPerCapita = await fetchGVAPerCapita(dateFrom, dateTo);
         }
         if (inflation === 'true') {
             responseData.inflation = await fetchInflation(dateFrom, dateTo);
